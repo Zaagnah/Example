@@ -42,13 +42,8 @@ public class PlayerMove : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
-
             }
         }
-
-
-
-
     }
 
     public void Jump()
@@ -79,13 +74,10 @@ public class PlayerMove : MonoBehaviour
         {
             case "Finish":
                 {
-
                     Invoke("LoadNextLevel", 3f);
                     break;
                 }
         }
-
-
     }
     private void LoadNextLevel()
     {
@@ -120,17 +112,12 @@ public class PlayerMove : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
-        void OnCollisionExit(Collision other)
-        {
-
-        }
+       
 
 
         public void LoadFirstLevel()
         {
-
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
         }
         public void LoadLevel()
         {
